@@ -8,8 +8,6 @@ const adminRoutes = {
 const routes = {
   HOME: '/',
   RAFFLES: '/raffles',
-  STAKE: '/stake',
-  TOOLS: '/tools',
   ADMIN: adminRoutes,
 };
 

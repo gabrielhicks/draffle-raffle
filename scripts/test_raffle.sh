@@ -12,11 +12,9 @@ ${SCRIPT_PATH}/parse-and-generate-idl-types.sh
 
 set -m
 DRAFFLE_PROGRAM_ID="$(solana address -k ${SCRIPT_PATH}/sample_accounts/draffle-keypair.json)"
-COMMUNITY_STAKING_PROGRAM_ID="$(solana address -k ${SCRIPT_PATH}/sample_accounts/community_staking-keypair.json)"
 
 solana-test-validator \
 --bpf-program ${DRAFFLE_PROGRAM_ID} ${SCRIPT_PATH}/../target/deploy/draffle.so \
---bpf-program ${COMMUNITY_STAKING_PROGRAM_ID} ${SCRIPT_PATH}/../target/deploy/community_staking.so \
 --bpf-program metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s scripts/metaplex_token_metadata.so \
 --clone H6ARHf6YXhGYeQfUzQNGk6rDNnLBQKrenN712K4AQJEG \
 --clone GVXRSBjFk6e6J3NbVPXohDJetcTjaeeuykUpbQF8UoMU \

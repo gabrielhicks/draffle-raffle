@@ -7,7 +7,6 @@ import { useHistory } from 'react-router-dom';
 
 import { useStyles } from './styles';
 import { routes } from '../../../router/routes';
-import AirdropButton from '../../AirdropButton';
 import { useViewport } from '../../../hooks/useViewport';
 import { DeviceType } from '../../../providers/ViewportProvider';
 import Drawer from '../Drawer';
@@ -23,8 +22,6 @@ export interface HeaderProps {
 const NAV_LINKS_LIST = [
   { label: 'Home', target: routes.HOME },
   { label: 'Explore', target: routes.RAFFLES },
-  { label: 'Stake', target: routes.STAKE },
-  { label: 'Tools', target: routes.TOOLS },
   { label: 'Admin Panel', target: routes.ADMIN.HOME, admin: true },
 ];
 
@@ -95,7 +92,6 @@ const Header: FC<HeaderProps> = ({ onBackNavigation }) => {
                   style={{ marginRight: '20px' }}
                 />
               ))}
-              {connected && TESTING && <AirdropButton />}
               <div className={classes.walletButtonContainer}>
                 <WalletButton />
               </div>
